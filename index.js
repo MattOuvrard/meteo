@@ -9,6 +9,7 @@ process();
 })
 
   function process(name){
+	  console.log("bleu);
   slide_index = 1;
   if(!name){
     name = "london";
