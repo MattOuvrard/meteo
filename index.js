@@ -19,8 +19,8 @@ process();
 
   function grab_weather(name){
   return fetch(
-    "http://api.openweathermap.org/data/2.5/forecast?q=Perpignan&appid=19a1d538790042907c76e427f9c2f20d"
-    //"http://api.openweathermap.org/data/2.5/forecast?q=" + name + "&appid=19a1d538790042907c76e427f9c2f20d"
+    //"http://api.openweathermap.org/data/2.5/forecast?q=Perpignan&appid=19a1d538790042907c76e427f9c2f20d"
+    "http://api.openweathermap.org/data/2.5/forecast?q=" + name + "&appid=19a1d538790042907c76e427f9c2f20d"
   ).then(res=> res.json());
 }
 
