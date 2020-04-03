@@ -21,7 +21,7 @@ process();
   function grab_weather(name){
   return fetch(
     //"http://api.openweathermap.org/data/2.5/forecast?q=Perpignan&appid=19a1d538790042907c76e427f9c2f20d"
-    "http://api.openweathermap.org/data/2.5/forecast?q=" + name + "&appid=19a1d538790042907c76e427f9c2f20d"
+    "https://api.openweathermap.org/data/2.5/forecast?q=" + name + "&appid=19a1d538790042907c76e427f9c2f20d"
   ).then(res=> res.json());
 }
 
@@ -45,7 +45,7 @@ process();
   // ici on les remplit avec les informations json
   m_name.textContent = name;
   m_date.textContent = fiche_technique["dt_txt"];
-  m_icon.src = "http://openweathermap.org/img/wn/"+ fiche_technique["weather"][0]["icon"] + "@2x.png";
+  m_icon.src = "https://openweathermap.org/img/wn/"+ fiche_technique["weather"][0]["icon"] + "@2x.png";
   m_humidite.textContent = "humidité : " + fiche_technique["main"]["humidity"];
   v_kh = fiche_technique["wind"]["speed"]*3.6;
   m_vent.textContent ="vitesse du vent : "+ v_kh.toFixed(2  ) + "km/h";//+ fiche_technique["wind"]["speed"]+ "m/s";
